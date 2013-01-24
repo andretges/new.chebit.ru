@@ -4,6 +4,7 @@ gem 'activeadmin'
 gem 'active_admin_editor'
 gem 'activeadmin-translate'
 gem 'pg'
+gem 'rvm'
 gem "libv8", ">= 3.11.8"
 gem 'jquery-rails'
 gem "haml", ">= 3.1.7"
@@ -21,6 +22,7 @@ gem 'thin', ">= 1.5.0", :group => [:development, :test]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 
+gem 'airbrake'
 gem "unicorn", ">= 4.3.1", :group => :production
 
 group :assets do
@@ -38,6 +40,9 @@ group :development do
   gem "better_errors", ">= 0.3.2"
   gem "binding_of_caller", ">= 0.6.8"
   gem 'debugger'
+  gem 'capistrano'
+  gem 'capistrano-recipes0', :git => 'git://github.com/BrandyMint/capistrano-recipes0.git'
+  gem 'rvm-capistrano'
 end
 
 group :test do
