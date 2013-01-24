@@ -22,6 +22,7 @@ gem 'thin', ">= 1.5.0", :group => [:development, :test]
 gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 
+gem 'airbrake'
 gem "unicorn", ">= 4.3.1", :group => :production
 
 group :assets do
