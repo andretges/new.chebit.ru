@@ -20,7 +20,7 @@ if rails_env=='production'
   stdout_path APP_PATH + "shared/log/unicorn.stdout.log"
 elsif rails_env=='stage'
   worker_processes 3
-  APP_PATH = ENV['APP_PATH'] || '/home/wwwchebit/chebit.icfdev.ru/'
+  APP_PATH = ENV['APP_PATH'] || '/home/wwwchebit/stage.new.chebit.ru/'
   working_directory APP_PATH + "current"
 
   listen APP_PATH + "shared/pids/unicorn.sock"
