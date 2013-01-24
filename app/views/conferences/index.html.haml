@@ -1,0 +1,22 @@
+%h1 Listing conferences
+
+%table
+  %tr
+    %th Title
+    %th Date conference
+    %th Content
+    %th
+    %th
+    %th
+
+  - @conferences.each do |conference|
+    %tr
+      %td= conference.title
+      %td= conference.date_conference
+      %td= conference.content
+      %td= link_to 'Show', conference
+      %td= link_to 'Edit', edit_conference_path(conference)
+
+%br
+
+= link_to 'New Conference', new_conference_path

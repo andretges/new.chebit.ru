@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @conference.title
+%p
+  %b Date conference:
+  = @conference.date_conference
+%p
+  %b Content:
+  = @conference.content
+
+= link_to 'Edit', edit_conference_path(@conference)
+\|
+= link_to 'Back', conferences_path
