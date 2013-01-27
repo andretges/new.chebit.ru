@@ -1,17 +1,29 @@
-= link_to "New.Chebit.Ru", root_path, :class => 'brand'
-%ul.nav
-  - if user_signed_in?
-    %li
-      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-  - else
-    %li
-      = link_to 'Login', new_user_session_path
-  - if user_signed_in?
-    %li
-      = link_to 'Edit account', edit_user_registration_path
-    - if current_user.has_role? :admin
-      %li
-        = link_to 'Admin', users_path
-  - else
-    %li
-      = link_to 'Sign up', new_user_registration_path
+.navbar-inner.header
+  .container
+    .row
+      .span2
+        %img{:src => '/assets/logo_head.jpg'}
+      .span4.offset1.head-text-big
+        Свободная конференция
+        %br
+        веб-разработчиков
+      .span3.offset1
+        %b Попросите рассказать
+        о том,
+        %br
+        что вам интересно узнать
+        %br
+        %br
+        %b Сделайте доклад
+        о том что вы знаете
+.container.body-title
+  .row
+    .span1.title-big
+      %i.fontello-icon-megaphone.icon-size-48
+    .span11.title-big.v-align-bottom
+      = @conf
+  .row
+    .span1.title-middle
+      %i.fontello-icon-calendar.icon-size-24.v-align-top
+    .span11.title-middle.v-align-middle
+      мероприятие прошло 23.02.2012

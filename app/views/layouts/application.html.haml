@@ -9,17 +9,16 @@
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
-    %header.navbar.navbar-fixed-top
-      %nav.navbar-inner
-        .container
-          = render 'layouts/navigation'
     #main{:role => "main"}
+      = render 'layouts/navigation'
       .container
-        .content
-          .row
-            .span12
-              = render 'layouts/messages'
+        .content.body
+          .row-fluid
+            = render 'layouts/messages'
+            .span9
               = yield
-          %footer
+            .span3
+              .body-menu-block Прямой эфир #chebit
       / ! end of .container
     / ! end of #main
+    = render 'layouts/footer'

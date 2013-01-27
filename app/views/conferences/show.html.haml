@@ -1,15 +1,15 @@
 %p#notice= notice
+.row.conf-block
+  .span2
+    %img{:src => '/avatar.jpg',:height => '25'}
+  .span8.conf-view-block
+    .conf-block-title
+      = @conference.title
+    .conf-block-date
+      %i.fontello-icon-calendar.icon-size-16.v-align-top
+      = @conference.date_conference.strftime('%d.%m.%Y')
+    .conf-block-text
+      = @conference.content
 
-%p
-  %b Title:
-  = @conference.title
-%p
-  %b Date conference:
-  = @conference.date_conference
-%p
-  %b Content:
-  = @conference.content
-
-= link_to 'Edit', edit_conference_path(@conference)
-\|
-= link_to 'Back', conferences_path
+= link_to conferences_path, :class => 'btn' do
+  Назад

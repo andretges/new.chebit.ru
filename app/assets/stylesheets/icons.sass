@@ -1,0 +1,8 @@
+@each $size in 10, 12, 14, 16, 20, 24, 32, 48
+  .icon-size-#{$size}
+    font-size: #{$size}px
+    min-width: #{$size}px
+
+@each $align in top, baseline, middle, bottom
+  .v-align-#{$align}
+    vertical-align: #{$align}
