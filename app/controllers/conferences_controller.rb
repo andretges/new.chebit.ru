@@ -3,7 +3,7 @@ class ConferencesController < InheritedResources::Base
 
   def index
     @conferences = Conference.all
-    @conf = Conference.all.sort { |x, y| y.date_conference <=> x.date_conference }.first.title
+    @conf = Conference.all.sort { |x, y| y.date_conference <=> x.date_conference }.first
   end
 
   def new
@@ -16,7 +16,7 @@ class ConferencesController < InheritedResources::Base
 
   def show
     @conference = Conference.find(params[:id])
-    @conf = Conference.find(params[:id]).title
+    @conf = Conference.find(params[:id])
   end
 
   def edit

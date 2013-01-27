@@ -21,7 +21,7 @@
     .span1.title-big
       %i.fontello-icon-megaphone.icon-size-48
     .span11.title-big.v-align-bottom
-      = @conf
+      = @conf.title unless @conf.nil?
   .row
     .span1.title-middle
       %i.fontello-icon-calendar.icon-size-24.v-align-top
