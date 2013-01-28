@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class ConferencesController < InheritedResources::Base
+layout "conference"
 
   def index
     @conferences = Conference.all

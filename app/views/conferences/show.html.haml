@@ -1,15 +1,42 @@
-%p#notice= notice
-.row.conf-block
-  .span2
-    %img{:src => '/avatar.jpg',:height => '25'}
-  .span8.conf-view-block
-    .conf-block-title
-      = @conference.title
-    .conf-block-date
-      %i.fontello-icon-calendar.icon-size-16.v-align-top
-      = @conference.date_conference.strftime('%d.%m.%Y')
-    .conf-block-text
-      = @conference.content
+.body-menu-block Все выступления
+.row-fluid
+  .span6
+    .row.conf-block
+      .span4
+        %img{:src => '/avatar.jpg',:height => '25'}
+      .span8.conf-view-block
+        .conf-block-title
+          = @conference.title
+        .conf-block-date
+          %i.fontello-icon-calendar.icon-size-16.v-align-top
+          = @conference.date_conference.strftime('%d.%m.%Y')
+        .conf-block-text
+          = @conference.content
+  .span6
+    .row.conf-block
+      .span4
+        %img{:src => '/avatar.jpg',:height => '25'}
+      .span8.conf-view-block
+        .conf-block-title
+          = @conference.title
+        .conf-block-date
+          %i.fontello-icon-calendar.icon-size-16.v-align-top
+          = @conference.date_conference.strftime('%d.%m.%Y')
+        .conf-block-text
+          = @conference.content
+.row-fluid
+  .span6
+    .row.conf-block
+      .span4
+        %img{:src => '/avatar.jpg',:height => '25'}
+      .span8.conf-view-block
+        .conf-block-title
+          = @conference.title
+        .conf-block-date
+          %i.fontello-icon-calendar.icon-size-16.v-align-top
+          = @conference.date_conference.strftime('%d.%m.%Y')
+        .conf-block-text
+          = @conference.content
 
-= link_to conferences_path, :class => 'btn' do
+= link_to '/', :class => 'btn' do
   Назад
