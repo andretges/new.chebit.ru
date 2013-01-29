@@ -3,5 +3,8 @@ class Conference < ActiveRecord::Base
   attr_accessible :content, :date_conference, :title, :image
   has_many :presentation, :dependent => :destroy
 
-  mount_uploader :image, FileUploader
+  validates :title, :presence => true
+  validates :content, :presence => true
+
+  mount_uploader :image, ImageUploader
 end

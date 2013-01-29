@@ -3,3 +3,6 @@
 
 ru:
   hello: "привет"
+  time:
+    formats:
+      default: "%d.%m.%Y"
