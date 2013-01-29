@@ -1,5 +1,5 @@
 class AddColumnConferenceAvatar < ActiveRecord::Migration
   def change
-    add_column :conferences, :avatar, :string
+    add_column :conferences, :image, :string
   end
 end

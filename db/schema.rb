@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20130129055551) do
     t.text     "content"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "avatar"
+    t.string   "image"
   end
 
   create_table "presentations", :force => true do |t|

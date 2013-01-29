@@ -20,14 +20,14 @@
 .container.body-title
   .row-fluid
     .span1.title-big
-      = link_to @conf do
+      = link_to @conference do
         %i.fontello-icon-megaphone.icon-size-48
     .span11.title-big.v-align-top
-      = link_to @conf do
-        = @conf.title unless @conf.nil?
+      = link_to @conference do
+        = @conference.title unless @conference.nil?
   .row
     .span1.title-middle
       %i.fontello-icon-calendar.icon-size-24.v-align-top
     .span11.title-middle.v-align-middle
       мероприятие прошло 
-      = @conf.date_conference.strftime('%d.%m.%Y') unless @conf.nil?
+      = @conference.date_conference.strftime('%d.%m.%Y') unless @conference.nil?

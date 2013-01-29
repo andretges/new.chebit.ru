@@ -1,10 +1,7 @@
 - @conferences.each do |conference|
   .row.conf-block
     .span2
-      - unless conference.avatar.present?
-        %img{:src => '/avatar.jpg',:height => '25'}
-      - else
-        %img{:src => conference.avatar,:height => '25'}
+      %img{:src => conference.image.url,:height => '25'}
     .span8.conf-view-block
       .conf-block-title
         = link_to conference, :class => 'conf-block-title' do

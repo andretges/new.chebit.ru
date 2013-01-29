@@ -2,6 +2,10 @@
 
 class FileUploader < CarrierWave::Uploader::Base
 
+  def default_url
+    "/" + [version_name, "avatar.jpg"].compact.join('_')
+  end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
