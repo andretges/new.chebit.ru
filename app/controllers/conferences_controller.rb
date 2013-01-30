@@ -17,7 +17,6 @@ layout "conference"
 
   def show
     @conference = Conference.find(params[:id])
-    @conf = Conference.find(params[:id])
   end
 
   def edit

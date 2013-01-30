@@ -1,14 +1,14 @@
 - @conferences.each do |conference|
   .row.conf-block
     .span2
-      %img{:src => '/avatar.jpg',:height => '25'}
+      = image_tag conference.image.url
     .span8.conf-view-block
       .conf-block-title
         = link_to conference, :class => 'conf-block-title' do
           = conference.title
       .conf-block-date
         %i.fontello-icon-calendar.icon-size-16.v-align-top
-        = conference.date_conference.strftime('%d.%m.%Y')
+        = l conference.date_conference
       .conf-block-text
         = conference.content
     .span1.conf-link

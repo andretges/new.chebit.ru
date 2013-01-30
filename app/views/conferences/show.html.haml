@@ -3,40 +3,28 @@
   .span6
     .row.conf-block
       .span4
-        %img{:src => '/avatar.jpg',:height => '25'}
+        = image_tag @conference.image.url
       .span8.conf-view-block
         .conf-block-title
           = @conference.title
         .conf-block-date
           %i.fontello-icon-calendar.icon-size-16.v-align-top
-          = @conference.date_conference.strftime('%d.%m.%Y')
+          = l @conference.date_conference
         .conf-block-text
           = @conference.content
-  .span6
-    .row.conf-block
-      .span4
-        %img{:src => '/avatar.jpg',:height => '25'}
-      .span8.conf-view-block
-        .conf-block-title
-          = @conference.title
-        .conf-block-date
-          %i.fontello-icon-calendar.icon-size-16.v-align-top
-          = @conference.date_conference.strftime('%d.%m.%Y')
-        .conf-block-text
-          = @conference.content
-.row-fluid
-  .span6
-    .row.conf-block
-      .span4
-        %img{:src => '/avatar.jpg',:height => '25'}
-      .span8.conf-view-block
-        .conf-block-title
-          = @conference.title
-        .conf-block-date
-          %i.fontello-icon-calendar.icon-size-16.v-align-top
-          = @conference.date_conference.strftime('%d.%m.%Y')
-        .conf-block-text
-          = @conference.content
+  - @conference.presentation.each do |present|
+    .span6
+      .row.conf-block
+        .span4
+          = image_tag present.file.url
+        .span8.conf-view-block
+          .conf-block-title
+            = present.title
+          .conf-block-date
+            %i.fontello-icon-calendar.icon-size-16.v-align-top
+            = l @conference.date_conference
+          .conf-block-text
+            = present.context
 
 = link_to '/', :class => 'btn' do
   Назад

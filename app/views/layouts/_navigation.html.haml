@@ -39,4 +39,4 @@
       %i.fontello-icon-calendar.icon-size-24.v-align-top
     .span11.title-middle.v-align-middle
       мероприятие прошло 
-      = @conf.date_conference.strftime('%d.%m.%Y') unless @conf.nil?
+      = l @conf.date_conference if @conf.present?
