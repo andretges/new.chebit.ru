@@ -1,15 +1,10 @@
 NewChebitRu::Application.routes.draw do
-  resources :conferences
-
+  resources :conferences, :only => [:index, :show]
+  resources :presentations, :only => [:show]
 
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  authenticated :user do
-    root :to => 'home#index'
-  end
-  root :to => "home#index"
-  devise_for :users
-  resources :users
+  root :to => "conferences#index"
 end

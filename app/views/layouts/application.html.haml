@@ -10,8 +10,10 @@
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
-      = render 'layouts/navigation'
-      .container
+      = render 'layouts/header'
+      -if @anounce_conference.present?
+        = render 'layouts/navigation'
+      .container.top_space
         .content.body
           .row-fluid
             = render 'layouts/messages'

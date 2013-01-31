@@ -1,30 +1,9 @@
-.navbar-inner.header
-  .container
-    .row
-      .span2
-        = link_to '/' do
-          %img{:src => '/assets/logo_head.jpg'}
-      .span4.offset1.head-text-big
-        Свободная конференция
-        %br
-        веб-разработчиков
-      .span3.offset1
-        %b Попросите рассказать
-        о том,
-        %br
-        что вам интересно узнать
-        %br
-        %br
-        %b Сделайте доклад
-        о том что вы знаете
 .container.body-title
   .row-fluid
     .span1.title-big
-      = link_to @conference do
-        %i.fontello-icon-megaphone.icon-size-48
+      %i.fontello-icon-megaphone.icon-size-48
     .span11.title-big.v-align-top
-      = link_to @conference do
-        = @conference.title unless @conference.nil?
+      = @conference.title
   .row
     .span1.title-middle
       %i.fontello-icon-calendar.icon-size-24.v-align-top
