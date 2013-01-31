@@ -13,6 +13,8 @@
           = l conference.date_conference
         .conf-block-text
           = conference.content
+        .conf-block-text
+          %a{:href => "/conferences/#{conference.id}#disqus_thread"} Комментарии
       .span1.conf-link
         = link_to conference, :class => 'conf-link' do
           = content_tag(:i, '', :class=>'fontello-icon-right-open-big icon-size-48 v-align-top')
