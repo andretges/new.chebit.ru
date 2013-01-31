@@ -47,20 +47,20 @@ ActiveRecord::Schema.define(:version => 20130130092828) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "conferences", :force => true do |t|
-    t.string   "title"
-    t.datetime "date_conference"
-    t.text     "content"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "title",                              :null => false
+    t.datetime "date_conference",                    :null => false
+    t.text     "content",                            :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "image"
-    t.boolean  "anounce"
+    t.boolean  "anounce",         :default => false, :null => false
   end
 
   create_table "presentations", :force => true do |t|
-    t.integer  "conference_id"
-    t.string   "title"
-    t.text     "context"
-    t.string   "autor"
+    t.integer  "conference_id", :null => false
+    t.string   "title",         :null => false
+    t.text     "context",       :null => false
+    t.string   "autor",         :null => false
     t.text     "video_embed"
     t.string   "file_name"
     t.string   "file"

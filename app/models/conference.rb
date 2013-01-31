@@ -4,6 +4,7 @@ class Conference < ActiveRecord::Base
   has_many :presentation, :dependent => :destroy
 
   validates :title, :presence => true
+  validates :date_conference, :presence => true
   validates :content, :presence => true
 
   mount_uploader :image, ImageUploader
