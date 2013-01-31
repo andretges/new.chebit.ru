@@ -30,16 +30,7 @@
               %i.fontello-icon-video.icon-size-16.v-align-top
             - if present.file.present?
               %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
-.row-fluid
-  .span12
-    #disqus_thread
-    %noscript
-      Please enable JavaScript to view the
-      %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
-    %a.dsq-brlink{:href => "http://disqus.com"}
-      comments powered by
-      %span.logo-disqus Disqus
-
+= render :partial => 'layouts/disquss'
 
 = link_to '/', :class => 'btn' do
   Назад
