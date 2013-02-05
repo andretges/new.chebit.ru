@@ -1,27 +1,49 @@
-.body-menu-block
-  - if @presentation.video_embed.present?
-    %i.fontello-icon-video.icon-size-24.v-align-top
-  - if @presentation.file.present?
-    %i.fontello-icon-doc-text-inv.icon-size-24.v-align-top
-  = @presentation.title
-.row-fluid
+.row
   .span12
-    .row-fluid.conf-block
-      .span2
-        = image_tag @presentation.image.url
-      .span10.conf-view-block
-        .conf-block-date
+    .row-fluid.row-presentation
+      .span1
+        .row-fluid
+          .gray-block-title
+            - if @presentation.video_embed.present?
+              %i.fontello-icon-video.icon-size-32.gray-icon
+            - if @presentation.file.present? && !@presentation.video_embed.present?
+              %i.fontello-icon-doc-text-inv.icon-size-32.gray-icon
+      .span7
+        .row-fluid
+          .gray-title
+            = @presentation.title
+      .span4
+        .gray-block-autor
           %i.fontello-icon-user.icon-size-16.v-align-top
           = @presentation.autor
-        .conf-block-text
-          = @presentation.context
-        .conf-block-text
-          = @presentation.video_embed.html_safe if @presentation.video_embed.present?
+  .span12
+    .row
+      .span8
+        .row
+          .span8.conf-block-view
+            .conf-block-text
+              = @presentation.video_embed.html_safe if @presentation.video_embed.present?
+      .span4.presentation-block-about
+        .presentation-block-title
+          = @presentation.title
+        .presentation-block-text
+          = @presentation.context.html_safe
         - if @presentation.file_name.present?
-          = link_to @presentation do
-            %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
-            = @presentation.file_name
+          .presentation-block-text
+            Приложение:
+          .presentation-block-text
+            = link_to @presentation do
+              %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
+              = @presentation.file_name
+        .presentation-block-text
+          Еще из этого выступления:
+        .blue-block
+          %i.fontello-icon-camera.icon-size-24
+          %i.fontello-icon-doc-text-inv.icon-size-24
+        .presentation-block-text
+          Поделиться:
+        .blue-block
+          %i.fontello-icon-twitter.icon-size-24
+          %i.fontello-icon-facebook-rect.icon-size-24
+          %i.fontello-icon-vkontakte.icon-size-24
 = render :partial => 'layouts/disquss'
-      
-= link_to conference_path(@presentation.conference), :class => 'btn' do
-  Назад

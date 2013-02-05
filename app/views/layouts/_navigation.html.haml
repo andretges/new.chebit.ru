@@ -1,23 +1,25 @@
 .container.body-title
   .row-fluid
-    .span1.title-big
-      = link_to @conf do
-        %i.fontello-icon-megaphone.icon-size-48
-    .span8.title-big.v-align-top
-      = link_to @anounce_conference do
-        = @anounce_conference.title
-        %img{:src => '/assets/link_btn.jpg', :width => '50'}
+    .span9
+      .row
+        .span1.title-big
+          = link_to @anounce_conference do
+            %i.fontello-icon-megaphone.icon-size-48
+        .span8.title-big.v-align-top
+          = link_to @anounce_conference do
+            = @anounce_conference.title
+            = image_tag("link_btn.jpg", :width => "50")
+      .row
+        .span1.title-middle
+          %i.fontello-icon-calendar.icon-size-24.v-align-top
+        .span11.title-middle.v-align-middle
+          мероприятие прошло 
+          = l @anounce_conference.date_conference if @anounce_conference.present?
     .span3
-      = link_to @conf do
-        %img{:src => '/assets/link_video.jpg'}
+      = link_to @anounce_conference do
+        = image_tag('link_video.jpg')
       .title-text
-        = link_to '/', :class => 'title-text' do
+        = link_to root_url, :class => 'title-text' do
           видео и презентации
           %br
           с выступлений >
-  .row
-    .span1.title-middle
-      %i.fontello-icon-calendar.icon-size-24.v-align-top
-    .span11.title-middle.v-align-middle
-      мероприятие прошло 
-      = l @conf.date_conference if @conf.present?

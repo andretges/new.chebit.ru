@@ -10,3 +10,8 @@
     .span11.title-middle.v-align-middle
       мероприятие прошло 
       = l @conference.date_conference if @conference.present?
+  .row
+    .span1.title-middle
+      %i.fontello-icon-info-circled.icon-size-24.v-align-top
+    .span11.title-middle.v-align-middle
+      = @conference.content

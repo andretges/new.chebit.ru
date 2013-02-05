@@ -6,16 +6,13 @@
       %meta{:content => content_for?(:description) ? yield(:description) : "New.Chebit.Ru", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
+        = javascript_include_tag 'modernizr.min'
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
-      = render 'layouts/header'    
-      .container.top_space
+      = render 'layouts/header_presentation'
+      .container.top-space
         .content.body
-          .row-fluid
-            = render 'layouts/messages'
-            = yield
-      / ! end of .container
-    / ! end of #main
+          = yield
     = render 'layouts/footer'

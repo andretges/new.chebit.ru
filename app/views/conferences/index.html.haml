@@ -1,60 +1,31 @@
-.span9
-  .body-menu-block Все мероприятия
-  - @conferences.each do |conference|
-    .row.conf-block
-      .span2
-        = image_tag conference.image.url
-      .span8.conf-view-block
-        .conf-block-title
-          = link_to conference, :class => 'conf-block-title' do
-            = conference.title
-        .conf-block-date
-          %i.fontello-icon-calendar.icon-size-16.v-align-top
-          = l conference.date_conference
-        .conf-block-text
-          = conference.content
-        .conf-block-text
-          %a{:href => "/conferences/#{conference.id}#disqus_thread"} Комментарии
-      .span1.conf-link
-        = link_to conference, :class => 'conf-link' do
-          = content_tag(:i, '', :class=>'fontello-icon-right-open-big icon-size-48 v-align-top')
-          %br
-          .conf-block-view
-            посмотреть доклады
-.span3
-  .row.twitt-block
-    .span10.offset1
-      .twitt-block-title Прямой эфир #chebit
-      .twitt-border
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
-        .right-block
-          = link_to '/' do
-            %strong @autor
-          Вам есть чем поделиться с коллегами по работе, и вы хотите узнать больше о новинках в области сетевого маркетинга
+.row-fluid
+  .span9
+    .body-menu-block Все мероприятия
+    - @conferences.each do |conference|
+      .conf-block
+        .row-fluid
+          .span2
+            = image_tag conference.image.url
+          .span8.conf-view-block
+            .conf-block-title
+              = link_to conference, :class => 'conf-block-title' do
+                = conference.title
+            .conf-block-date
+              %i.fontello-icon-calendar.icon-size-16.v-align-top
+              = l conference.date_conference
+            .conf-block-text
+              = conference.content.html_safe
+            .conf-block-text
+              %a{:href => "/conferences/#{conference.id}#disqus_thread"} Комментарии
+          .span1.conf-link
+            = link_to conference, :class => 'conf-link' do
+              = content_tag(:i, '', :class=>'fontello-icon-right-open-big icon-size-48 v-align-top')
+              %br
+              .conf-block-view
+                посмотреть доклады
+  .span3
+    .row.twitt-block
+      .span10.offset1
+        .twitt-block-title Прямой эфир #chebit
+        .twitt-border
+          = render 'layouts/twitter'

@@ -1,19 +1,24 @@
-.container.footer
-  .row
-    .span2
-      = link_to '/' do
-        %img{:src => '/assets/logo_footer.jpg'}
-    .span2.footer-title
-      Контакты
-    .span8
-      Данил Письменный, Данил Письменный, Данил Письменный
-  .row
-    .span2.offset2.footer-title
-      Партнеры
-    .span8
-      Данил Письменный, Данил Письменный, Данил Письменный
-  .row
-    .span2.offset2.footer-title
-      Коллеги по цеху
-    .span8
-      Данил Письменный, Данил Письменный, Данил Письменный
+%footter.footer
+  .container
+    .row-fluid
+      .span2
+        .footer-logo
+          = link_to root_url do
+            =image_tag('logo_footer.jpg')
+      .span8
+        .row
+          .footer-title
+            Контакты
+          .footer-text
+            Данил Письменный, Данил Письменный, Данил Письменный
+        .row
+          .footer-title
+            Партнеры
+          .footer-text
+            Данил Письменный, Данил Письменный, Данил Письменный
+        .row
+          .footer-title
+            Коллеги по цеху
+          .footer-text
+            Данил Письменный, Данил Письменный, Данил Письменный
+

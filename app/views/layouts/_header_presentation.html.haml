@@ -1,0 +1,10 @@
+.navbar-inner.header
+  .container
+    .row-fluid
+      .span2.logo-top
+        = link_to root_url do
+          = image_tag('logo_head.jpg')
+      .span10.presentation-link-back
+        = link_to conference_path(@presentation.conference) do
+          %i.fontello-icon-left-open-big.icon-size-16.v-align-middle
+          вернуться к выступлениям конференции

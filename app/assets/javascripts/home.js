@@ -10,4 +10,8 @@
         s.type = 'text/javascript';
         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        var max_height
+        max_height = $("div.content").height();
+        $(".twitt-block").css("min-height", 'max_height');
+
       })();
