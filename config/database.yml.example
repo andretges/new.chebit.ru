@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: newchebit_development
+  pool: 5
+  username:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: newchebit_test
+  pool: 5
+  username:
+
+icf:
+  adapter: postgresql
+  encoding: unicode
+  database: newchebit_icf
+  pool: 5
+  username:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: newchebit_production
+  pool: 5
+  username:
