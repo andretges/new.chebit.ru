@@ -5,26 +5,31 @@
         .footer-logo
           = link_to root_url do
             =image_tag('logo_footer.jpg')
-      .span8.footer-block
+      .span10.footer-block
         .row-fluid.footer-row-block
-          .span3
+          .span2
             .footer-title
               Контакты
-          .span9
+          .span10
             .footer-text
               Данил Письменный, Данил Письменный, Данил Письменный
         .row-fluid.footer-row-block
-          .span3
+          .span2
             .footer-title
               Партнеры
-          .span9
+          .span10
             .footer-text
-              Данил Письменный, Данил Письменный, Данил Письменный
+              =link_to 'http://www.ravidok.ru/', :target => '_blank' do
+                = image_tag("vidok.png", :class => "logo-partner")
+              =link_to 'http://webatmosfera.ru/', :target => '_blank' do
+                = image_tag("webatmosfera.svg", :class => "logo-partner")
+              =link_to 'http://www.avis-design.ru/', :target => '_blank' do
+                = image_tag("avis_design.gif", :class => "logo-partner")
         .row-fluid.footer-row-block
-          .span5
+          .span4
             .footer-title
               Коллеги по цеху
-          .span7
+          .span8
             .footer-text.footer-ceh
               Данил Письменный, Данил Письменный
 

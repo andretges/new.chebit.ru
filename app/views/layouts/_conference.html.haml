@@ -5,13 +5,13 @@
     .span11.title-big.v-align-top
       = @conference.title
   .row
-    .span1.title-middle
+    .span1.title-middle-conference
       %i.fontello-icon-calendar.icon-size-24.v-align-top
-    .span11.title-middle.v-align-middle
+    .span11.title-middle-conference.v-align-middle
       мероприятие прошло 
       = l @conference.date_conference if @conference.present?
   .row
-    .span1.title-middle
+    .span1.title-middle-conference
       %i.fontello-icon-info-circled.icon-size-24.v-align-top
-    .span10.title-middle.v-align-middle
+    .span10.title-middle-conference.v-align-middle
       = @conference.content.html_safe

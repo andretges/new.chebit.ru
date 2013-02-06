@@ -26,6 +26,8 @@
   .span3
     .row.twitt-block
       .span10.offset1
-        .twitt-block-title Прямой эфир #chebit
+        .twitt-block-title
+          Прямой эфир
+          = link_to "#chebit", root_url
         .twitt-border
           = render 'layouts/twitter'
