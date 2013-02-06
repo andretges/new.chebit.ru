@@ -6,6 +6,8 @@
       %meta{:content => content_for?(:description) ? yield(:description) : "New.Chebit.Ru", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
+        = javascript_include_tag "mediaelement-and-player.min.js"
+        = stylesheet_link_tag "mediaelementplayer.min.css"
         = javascript_include_tag 'modernizr.min'
         = csrf_meta_tags
         = yield(:head)
