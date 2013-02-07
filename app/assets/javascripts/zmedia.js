@@ -1,3 +1,5 @@
 $(function(){
-  $('video,audio').mediaelementplayer();
+  $('video,audio').mediaelementplayer({
+    defaultVideoWidth: 500
+  });
 })
