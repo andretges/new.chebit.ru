@@ -1,13 +1,13 @@
 <% if rails_env == 'production' %>
 server {
-   server_name www.new.chebit.ru;
-   rewrite ^(.*)$ http://new.chebit.ru$1 permanent;
+   server_name www.chebit.ru;
+   rewrite ^(.*)$ http://chebit.ru$1 permanent;
 }
 <% end %>
 
 server {
    <% if rails_env == 'production' %>
-   server_name  .new.chebit.ru;
+   server_name  .chebit.ru;
    <% else %>
    server_name .chebit.icfdev.ru;
    <% end %>
