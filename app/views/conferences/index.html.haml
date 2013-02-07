@@ -14,7 +14,7 @@
               %i.fontello-icon-calendar.icon-size-16.v-align-top
               = l conference.date_conference
             .conf-block-text
-              = conference.content.html_safe
+              = conference.description.html_safe
             .conf-block-text
               %a{:href => "/conferences/#{conference.id}#disqus_thread"} Комментарии
           .span1.conf-link

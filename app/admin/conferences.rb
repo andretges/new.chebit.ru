@@ -6,7 +6,7 @@ ActiveAdmin.register Conference do
     f.inputs "Создать Conference" do
       f.input :title
       f.input :date_conference, :as => :datepicker
-      f.input :content, as: :html_editor
+      f.input :description, as: :html_editor
       f.input :image
       f.input :anounce
     end
