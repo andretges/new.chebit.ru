@@ -3,9 +3,8 @@ class ConferencesController < InheritedResources::Base
 
 
   def index
-    @conferences = Conference.where(:anounce=>false).order("date_conference DESC").first(5)
-    @anounce_conference = Conference.where(:anounce=>true).first
-    @anounce_conference = Conference.where(:anounce=>false).order("date_conference DESC").first unless @anounce_conference.present?
+    @anounce_conference = Conference.order("date_conference DESC").first
+    @conferences = Conference.order("date_conference DESC").limit(5).offset(1)
     render :layout => "application"
   end
 
