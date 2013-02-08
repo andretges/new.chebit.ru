@@ -1,6 +1,9 @@
 .row.row-conference
   .conference-menu-block Все выступления
   .row-fluid
+    - if @conference.photo_content.present?
+      .span12
+        = @conference.photo_content
     - @conference.presentation.sort_presentation.each do |present|
       .span6.span-block
         .row-fluid

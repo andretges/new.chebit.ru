@@ -7,6 +7,7 @@ ActiveAdmin.register Conference do
       f.input :title
       f.input :date_conference, :as => :datepicker
       f.input :description, as: :html_editor
+      f.input :photo_content
       f.input :image
       f.input :anounce
     end

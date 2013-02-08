@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class Conference < ActiveRecord::Base
-  attr_accessible :description, :date_conference, :title, :image ,:anounce
+  attr_accessible :description, :date_conference, :title, :image ,:anounce, :photo_content
   has_many :presentation, :dependent => :destroy
 
   scope :sort_by_date, order('date_conference DESC')
