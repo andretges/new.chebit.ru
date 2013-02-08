@@ -1,7 +1,7 @@
 .row.row-conference
   .conference-menu-block Все выступления
   .row-fluid
-    - @conference.presentation.each do |present|
+    - @conference.presentation.sort_presentation.each do |present|
       .span6.span-block
         .row-fluid
           .span3

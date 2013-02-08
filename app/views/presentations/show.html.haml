@@ -23,24 +23,24 @@
           .span8.conf-block-view
             .conf-block-text
               = @presentation.video_embed.html_safe if @presentation.video_embed.present?
+        - if @presentation.file_name.present?
+          .row
+            .span8.conf-block-view
+              .presentation-block-text
+                Приложение:
+              .presentation-block-text
+                = link_to @presentation.file.url do
+                  %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
+                  = @presentation.file_name
       .span4.presentation-block-about
         .presentation-block-title
           = @presentation.title
         .presentation-block-text
           = @presentation.context.html_safe
-        - if @presentation.file_name.present?
-          .presentation-block-text
-            Приложение:
-          .presentation-block-text
-            = link_to @presentation do
-              %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
-              = @presentation.file_name
         .presentation-block-text
-          Еще из этого выступления:
-        .blue-block
-          %i.fontello-icon-camera.icon-size-24
-          %i.fontello-icon-doc-text-inv.icon-size-24
-        .presentation-block-text
+          %br
+          %br
+          %br
           Поделиться:
         .blue-block
           %i.fontello-icon-twitter.icon-size-24
