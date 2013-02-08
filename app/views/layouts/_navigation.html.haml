@@ -13,7 +13,7 @@
         .span1.title-middle
           %i.fontello-icon-calendar.icon-size-24.v-align-top
         .span11.title-middle.v-align-middle
-          = @anounce_conference.date_conference < Time.now ? I18n.t('anounce.date_passed') : I18n.t('anounce.date_will_be')
+          = @anounce_conference.passed? ? I18n.t('anounce.date_passed') : I18n.t('anounce.date_will_be')
           = l @anounce_conference.date_conference if @anounce_conference.present?
     .span3
       = link_to @anounce_conference do
