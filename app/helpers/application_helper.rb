@@ -15,4 +15,12 @@ module ApplicationHelper
   def fontello icon, size, custom_class = '' 
     content_tag :i, '', :class => "fontello-icon-#{icon} icon-size-#{size} #{custom_class}"
   end
+
+  def title(page_title)
+    content_for (:title) { page_title }
+  end
+
+  def yield_or_default(section, default = "")
+    content_for?(section) ? content_for(section) : default
+  end
 end
