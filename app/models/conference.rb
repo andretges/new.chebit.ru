@@ -10,4 +10,9 @@ class Conference < ActiveRecord::Base
   validates :description, :presence => true
 
   mount_uploader :image, ImageUploader
+
+  def passed?
+    self.date_conference < Time.now
+  end
+
 end

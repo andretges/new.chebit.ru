@@ -2,7 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ru:
-  hello: "привет"
+  anounce:
+    date_passed: мероприятие прошло
+    date_will_be: мероприятие будет
   time:
     formats:
       default: "%d.%m.%Y"
