@@ -11,9 +11,7 @@ A:hover
 
 .header
   background-color: #006892
-  -webkit-border-radius: 0 0 0 0
-  -moz-border-radius: 0 0 0 0
-  border-radius: 0 0 0 0
+  +border-radius(0)
   color: white
   background-image: none
   border: 0
@@ -29,10 +27,8 @@ A:hover
   padding: 25px 0 25px 40px
 
 .body
-  -webkit-border-radius: 10px 10px 10px 10px
-  -moz-border-radius: 10px 10px 10px 10px
-  border-radius: 10px 10px 10px 10px
-  box-shadow: 0 3px 4px rgba(0, 0, 0.15, 0.25)
+  +border-radius(10px)
+  +box-shadow(0 3px 4px rgba(0, 0, 0.15, 0.25))
 
 .body-title i
   float: right
@@ -54,9 +50,7 @@ A:hover
   color: #A9A9A9
   font-size: 22px
   padding: 20px
-  -webkit-border-radius: 10px 10px 0 0
-  -moz-border-radius: 10px 10px 0 0
-  border-radius: 10px 10px 0 0
+  +border-radius(10px 10px 0 0)
   margin: -20px -20px 20px -20px
 
 .row-conference
@@ -65,9 +59,7 @@ A:hover
 
 .row-presentation
   background-color: #eee
-  -webkit-border-radius: 10px 10px 0 0
-  -moz-border-radius: 10px 10px 0 0
-  border-radius: 10px 10px 0 0
+  +border-radius(10px 10px 0 0)
 
 .title-big
   font-size: 38px
@@ -84,6 +76,9 @@ A:hover
   color: white
   margin-top: 25px
   padding: 7px 0 0 20px
+
+.title-middle a
+  color: white
 
 .title-middle-conference
   font-size: 14px
@@ -141,9 +136,7 @@ A:hover
 .conf-block
   background-color: white
   padding: 20px 0 20px 20px
-  -webkit-border-radius: 0 0 0 10px
-  -moz-border-radius: 0 0 0 10px
-  border-radius: 0 0 0 10px
+  +border-radius(0 0 0 10px)
 
 .conf-block-title
   color: #F05A3F
@@ -252,3 +245,29 @@ A:hover
   height: 28px
   float: left
   padding-left: 25px
+
+.div-for-circle
+  float: left
+
+.circle
+  width: 50px
+  height: 50px
+  display: block
+  background: #F38465
+  +box-shadow(inset 0 1px 4px rgba(0, 0, 0, 0.5))
+  +border-radius(50px)
+
+.circle-link
+  color: white
+  margin: 14px 17px 0 0
+
+.rectangle
+  width: 130px
+  height: 80px
+  background-color: #EA6D51
+  +border-radius(7px)
+  border: 3px solid white
+
+.rectangle-play
+  color: #F7D2C2
+  padding: 16px 48px 0 0
