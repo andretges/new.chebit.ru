@@ -8,16 +8,20 @@
         .span8.title-big.v-align-top
           = link_to @anounce_conference do
             = @anounce_conference.title
-            = image_tag("link_btn.jpg", :width => "50")
+            %i.circle
+              .link-circle
       .row
         .span1.title-middle
           %i.fontello-icon-calendar.icon-size-24.v-align-top
         .span11.title-middle.v-align-middle
-          = @anounce_conference.passed? ? I18n.t('anounce.date_passed') : I18n.t('anounce.date_will_be')
-          = l @anounce_conference.date_conference if @anounce_conference.present?
+          = link_to @anounce_conference do
+            = @anounce_conference.passed? ? I18n.t('anounce.date_passed') : I18n.t('anounce.date_will_be')
+            = l @anounce_conference.date_conference if @anounce_conference.present?
     .span3
       = link_to @anounce_conference do
-        = image_tag('link_video.jpg')
+        .rectangle
+          .rectangle-play
+            %i.fontello-icon-play.icon-size-48.v-align-middle
       .title-text
         = link_to @anounce_conference, :class => 'title-text' do
           видео и презентации
