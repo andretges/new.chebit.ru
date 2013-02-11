@@ -1,25 +1,14 @@
-body
-  background-color: #00B9F1
-
-A
-  color: #F05A3F
-  text-decoration: none
-
-A:hover
-  color: #F05A3F
-  text-decoration: none
 
 .header
-  background-color: #006892
+  background-color: $HeaderBackgroundColor
   +border-radius(0)
-  color: white
+  color: $white
   background-image: none
   border: 0
-  height: 118px
   padding-top: 18px
 
 .head-text-big
-  font-size: 22px
+  font-size: $HeadFontSize
   line-height: 1.5
 
 .body-title
@@ -37,237 +26,78 @@ A:hover
   margin-left: 0
 
 .body-menu-block
-  background-color: #eee
-  color: #A9A9A9
-  font-size: 22px
+  background-color: $BodyBackgroundColorBlock
+  color: $grayLight
+  font-size: $HeadFontSize
   padding: 20px
-  -webkit-border-radius: 10px 0 0 0
-  -moz-border-radius: 10px 0 0 0
-  border-radius: 10px 0 0 0
+  +border-radius(10px 0 0 0)
 
 .conference-menu-block
-  background-color: #eee
-  color: #A9A9A9
-  font-size: 22px
+  background-color: $BodyBackgroundColorBlock
+  color: $grayLight
+  font-size: $HeadFontSize
   padding: 20px
   +border-radius(10px 10px 0 0)
   margin: -20px -20px 20px -20px
 
-.row-conference
-  margin-left: 0
-  padding: 20px
-
-.row-presentation
-  background-color: #eee
-  +border-radius(10px 10px 0 0)
-
 .title-big
-  font-size: 38px
+  font-size: $TitleBig
   font-weight: bold
-  color: white
+  color: $white
   line-height: 1.2
   padding: 0 0 0 18px
 
 .title-big a
-  color: white
+  color: $white
 
 .title-middle
-  font-size: 14px
-  color: white
+  font-size: $TitleMiddle
+  color: $white
   margin-top: 25px
   padding: 7px 0 0 20px
 
 .title-middle a
-  color: white
+  color: $white
 
 .title-middle-conference
-  font-size: 14px
-  color: white
+  font-size: $TitleMiddle
+  color: $white
   margin-top: 25px
 
 .title-padding
   padding-left: 15px
 
 .title-text
-  color: white
-  font-size: 14px
+  color: $white
+  font-size: $TitleMiddle
   font-weight: bold
   margin: 10px 0
 
 .title-text a
-  color: white
-
-.conf-view-block
-  padding: 0
-
-.footer
-  padding: 40px 0
-  color: white
-  font-size: 16px
-
-.footer-block
-  padding: 35px 0 0 0
-
-.footer-row-block
-  padding: 0 0 25px 0
-
-.footer .row
-  margin-top: 0
-  padding: 15px 0
-
-.footer-title
-  font-size: 24px
-  padding: 5px 0 0 18px
-
-.footer-text
-  float: left
-  padding: 5px 0 0 25px
-  width: 100%
-
-.footer-text a
-  color: white
-
-.footer-logo
-  margin-top: 33px
-
-.footer-ceh
-  margin-left: -35px
-
-.conf-block
-  background-color: white
-  padding: 20px 0 20px 20px
-  +border-radius(0 0 0 10px)
-
-.conf-block-title
-  color: #F05A3F
-  font-size: 24px
-  font-weight: bold
-  padding: 0 0 10px 15px
-  line-height: 1.2
-
-.conf-block-title a
-  color: #F05A3F
-
-.conf-block-date
-  color: #F05A3F
-  font-size: 14px
-  padding: 0 0 10px 12px
-
-.conf-block-date i
-  padding-right: 5px
-
-.conf-block-text
-  font-size: 12px
-  padding: 0 0 10px 15px
-
-.conf-link
-  color: #F05A3F
-  font-size: 12px
-
-.conf-link a
-  color: #F05A3F
-  font-size: 12px
-
-.conf-block-view
-  padding-top: 30px
-  padding-left: 23px
-
-.twitt-block
-  margin-right: -20px
-  padding-bottom: 20px
-  min-height: auto
-  background-color: #EAEAEA
-  -webkit-border-radius: 0 10px 10px 0
-  -moz-border-radius: 0 10px 10px 0
-  border-radius: 0 10px 10px 0
-
-.twitt-block-title
-  font-size: 16px
-  font-weight: bold
-  padding: 15px 0
-  margin-top: 5px
-
-.twitt-border
-  padding-top: 4px
-  margin-left: -10px
-
-.top-space
-  margin-top: 50px
-
-.gray-block-autor
-  color: #A9A9A9
-  font-size: 16px
-  padding: 20px 0 0 18px
-
-.gray-block-title
-  color: #A9A9A9
-  margin-bottom: 15px
-
-.gray-icon
-  margin: 10px 10px 10px 20px
-
-.gray-title
-  font-size: 22px
-  color: #909090
-  padding: 17px 0 0 20px
-
-.presentation-block-title
-  font-size: 18px
-  color: #F05A3F
-  font-weight: bold
-
-.presentation-block-text
-  font-size: 14px
-  padding-top: 10px
-
-.presentation-block-about
-  margin-left: 0
-  padding: 31px 0 20px 0
-
-.blue-block
-  color: #A4DEF8
-  padding-top: 10px
+  color: $white
 
 #disqus_thread
   padding: 20px
-
-.logo-top
-  padding: 30px 0 0 25px
-
-.presentation-link-back
-  font-size: 16px
-  padding: 25px 0 0 25px
-
-.presentation-link-back a
-  color: white
-
-.logo-partner
-  height: 28px
-  float: left
-  padding-left: 25px
-
-.div-for-circle
-  float: left
 
 .circle
   width: 50px
   height: 50px
   display: block
-  background: #F38465
+  background: $BackgroundCircleImage
   +box-shadow(inset 0 1px 4px rgba(0, 0, 0, 0.5))
   +border-radius(50px)
 
 .circle-link
-  color: white
+  color: $white
   margin: 14px 17px 0 0
 
 .rectangle
   width: 130px
   height: 80px
-  background-color: #EA6D51
+  background-color: $BackgroundRectangleImage
   +border-radius(7px)
   border: 3px solid white
 
 .rectangle-play
-  color: #F7D2C2
+  color: $BackgroundRectangleColor
   padding: 16px 48px 0 0
