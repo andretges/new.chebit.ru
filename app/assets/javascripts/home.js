@@ -1,5 +1,4 @@
-      (function() {
-        var max_height
-        max_height = $("div.content").height();
-        $(".twitt-block").css("min-height", 'max_height');
-      })();
+function resizeBlock() {
+  var max_height = $(".content").height();
+  $(".twitt-block").css("min-height", max_height+'px');
+}

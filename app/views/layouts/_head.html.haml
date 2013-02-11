@@ -7,7 +7,8 @@
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
         = javascript_include_tag "mediaelement-and-player.min.js"
-        = stylesheet_link_tag "mediaelementplayer.min.css"
+        = javascript_include_tag "jquery.imagesloaded.min.js"
         = javascript_include_tag 'modernizr.min'
+        = stylesheet_link_tag "mediaelementplayer.min.css"
         = csrf_meta_tags
         = yield(:head)
