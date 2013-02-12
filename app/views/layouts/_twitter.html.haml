@@ -1,0 +1,7 @@
+:javascript
+  $('.content').imagesLoaded(heightTwitter);
+- @twitter.each do |t|
+  .row
+    .span12.twitt-text
+      = link_to t.user.name, "http://twitter.com/#{t.user.screen_name}", :target => '_blank'
+      = t.text
