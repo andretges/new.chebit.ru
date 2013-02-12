@@ -1,7 +1,9 @@
 :javascript
   $('.content').imagesLoaded(heightTwitter);
-- @twitter.each do |t|
-  .row
-    .span12.twitt-text
-      = link_to t.user.name, "http://twitter.com/#{t.user.screen_name}", :target => '_blank'
-      = t.text
+- cache(:expires_in => 10.minutes) do
+  - @twitter = Twitter.search("#чебоксары -rt", :count => 10).results
+  - @twitter.each do |t|
+    .row
+      .span12.twitt-text
+        = link_to t.user.name, "http://twitter.com/#{t.user.screen_name}", :target => '_blank'
+        = t.text
