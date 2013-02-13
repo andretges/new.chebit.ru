@@ -93,6 +93,9 @@ GEM
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
+    cells (3.8.8)
+      actionpack (>= 3.0)
+      railties (>= 3.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
@@ -340,6 +343,7 @@ DEPENDENCIES
   capybara (>= 2.0.2)
   capybara-webkit
   carrierwave
+  cells
   coffee-rails (~> 3.2.1)
   compass
   database_cleaner (>= 0.9.1)

@@ -24,7 +24,7 @@ gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem 'carrierwave'
 gem 'modernizr-rails'
 gem 'twitter'
-
+gem 'cells'
 
 gem 'airbrake'
 gem "unicorn", ">= 4.3.1", :group => :production
