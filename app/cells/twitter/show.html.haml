@@ -1,0 +1,11 @@
+.row.twitt-block#twitt-height
+  .span10.offset1
+    .twitt-block-title
+      Прямой эфир
+      = link_to "#chebit", 'https://twitter.com/search?q=%23chebit', :target => '_blank'
+    .twitt-border
+      - twitter.each do |t|
+        .row
+          .span12.twitt-text
+            = link_to t.user.name, "http://twitter.com/#{t.user.screen_name}", :target => '_blank'
+            = t.text
