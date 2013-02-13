@@ -1,8 +1,8 @@
 $(function() {
-  $('.content').imagesLoaded(heightTwitter);
+  $('#conteiter-home').imagesLoaded(heightTwitter);
 });
 
 function heightTwitter() {
-  var max_height = $(".content").height();
-  $(".twitt-block").css("min-height", max_height+'px');
+  var max_height = $("#conteiter-home").height();
+  $("#twitt-height").css("min-height", max_height+'px');
 }
