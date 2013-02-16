@@ -1,33 +1,33 @@
-%footter.footer
+%footer.footer
   .container
     .row-fluid
       .span2
         .footer-logo
           = link_to root_url do
             =image_tag('logo_footer.jpg')
-      .span10.footer-block
-        .row-fluid.footer-row-block
-          .span2
-            .footer-title
-              Контакты
-          .span10
-            .footer-text
-              = link_to 'Данил Письменный', 'http://dapi.ru/', :target => '_blank'
-        .row-fluid.footer-row-block
-          .span2
-            .footer-title
-              Партнеры
-          .span10
-            .footer-text
-              =link_to 'http://www.ravidok.ru/', :target => '_blank' do
-                = image_tag("vidok.png", :class => "logo-partner")
-              =link_to 'http://webatmosfera.ru/', :target => '_blank' do
-                = image_tag("webatmosfera.svg", :class => "logo-partner")
-              =link_to 'http://www.avis-design.ru/', :target => '_blank' do
-                = image_tag("avis_design.gif", :class => "logo-partner")
-        .row-fluid.footer-row-block
-          .span4
-            .footer-title
-              Коллеги по цеху
-          .span8
-            .footer-text.footer-ceh
+      -#.span10.footer-block
+        -#.row-fluid.footer-row-block
+          -#.span2
+            -#.footer-title
+              -#Контакты
+          -#.span10
+            -#.footer-text
+              -#= link_to 'Данил Письменный', 'http://dapi.ru/', :target => '_blank'
+        -#.row-fluid.footer-row-block
+          -#.span2
+            -#.footer-title
+              -#Партнеры
+          -#.span10
+            -#.footer-text
+              -#=link_to 'http://www.ravidok.ru/', :target => '_blank' do
+                -#= image_tag("vidok.png", :class => "logo-partner")
+              -#=link_to 'http://webatmosfera.ru/', :target => '_blank' do
+                -#= image_tag("webatmosfera.svg", :class => "logo-partner")
+              -#=link_to 'http://www.avis-design.ru/', :target => '_blank' do
+                -#= image_tag("avis_design.gif", :class => "logo-partner")
+        -#.row-fluid.footer-row-block
+          -#.span4
+            -#.footer-title
+              -#Коллеги по цеху
+          -#.span8
+            -#.footer-text.footer-ceh
