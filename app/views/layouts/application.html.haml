@@ -2,8 +2,6 @@
 %body{:class => "#{controller_name} #{action_name}"}
   #main{:role => "main"}
     = render 'layouts/header'
-    -if @anounce_conference.present?
-      = render 'layouts/navigation'
     .container
       .content.body#conteiter-home
         = yield
