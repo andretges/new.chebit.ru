@@ -1,11 +1,11 @@
 !!!
 %html
   %head
-    %title= yield_or_default(:title, "CHEBIT - конференция веб-разработчиков в Чебоксарах. barcamp")
+    %title= yield_or_default(:title, "CHEBIT - barcamp-конференция веб-разработчиков в Чебоксарах")
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => content_for?(:description) ? yield(:description) : "CHEBIT", :name => "description"}
     = stylesheet_link_tag "application", :media => "all"
-    = stylesheet_link_tag "mediaelementplayer.min.css"
+    -#= stylesheet_link_tag "mediaelementplayer.min.css"
     = javascript_include_tag "application"
     = javascript_include_tag "mediaelement-and-player.min.js"
     = javascript_include_tag "jquery.imagesloaded.min.js"
@@ -13,7 +13,7 @@
     = csrf_meta_tags
     = yield(:head)
 %body{:class => "#{controller_name} #{action_name}"}
-  = render 'layouts/header'
+  = render 'layouts/navigation'
   #main{:role => "main"}
     .container
       .content

@@ -1,9 +1,15 @@
+.well
+  -# %p Свободная конференция веб-разработчиков, организаторами которой являются сами докладчики.
+  %p Если вы хотите что-то узнать &mdash; попросите об этом рассказать, а сами сделайте доклад о том, что знаете вы.
+
+%h2 Прошедшие события
+
 %ul.thumbnails
   - @conferences.each do |c|
     %li.span4
       .thumbnail
         = link_to conference_path(c) do
-          = image_tag c.image.standard.url
+          = image_tag c.image.extra.url, :width => '300x200'
         .caption
           %h3= link_to c.title, conference_path(c)
           %p
@@ -17,15 +23,15 @@
           .clearfix
 
 
-%hr
+-#%hr
 
-.container
-  .row
-    - @conferences.each do |c|
-      .span6
-        = c.photo_content.try :html_safe
+-#.container
+  -#.row
+    -#- @conferences.each do |c|
+      -#.span6
+        -#= c.photo_content.try :html_safe
 
-%br
-%br
+-#%br
+-#%br
 %hr
 = render :partial => 'layouts/disquss'

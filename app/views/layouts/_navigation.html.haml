@@ -1,0 +1,10 @@
+%header.navbar.navbar-static-top
+  %nav.navbar-inner
+    .container
+      = link_to root_url, :class => 'brand' do
+        %b CHEBIT
+        -# = image_tag('logo_head.jpg')
+      .pull-right
+        .brand{:rel=>:tooltip,:title=>'Если вы хотите что-то узнать — попросите об этом рассказать, а сами сделайте доклад о том, что знаете вы.'}
+          %small Ежегодная конференция веб-разработчиков в Чебоксарах
+        -# = render_navigation :expand_all => true, :renderer => :bootstrap
