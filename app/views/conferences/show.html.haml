@@ -5,7 +5,7 @@
     - if @conference.photo_content.present?
       .span12
         = @conference.photo_content
-    - @conference.presentations.sorted.each do |present|
+    - @conference.presentations.ordered.each do |present|
       .span6.span-block
         .row-fluid
           .span3
