@@ -1,5 +1,5 @@
 class Presentation < ActiveRecord::Base
-  attr_accessible :autor, :conference_id, :file, :file_name, :title, :context, :video_embed, :image
+  attr_accessible :author, :conference_id, :file, :file_name, :title, :content, :video_embed, :image
 
   mount_uploader :file, FileUploader
   mount_uploader :image, ImageUploader
@@ -10,6 +10,6 @@ class Presentation < ActiveRecord::Base
 
   validates :conference, :presence => true
   validates :title, :presence => true, :presence => true
-  validates :autor, :presence => true
-  validates :context, :presence => true
+  validates :author, :presence => true
+  validates :content, :presence => true
 end

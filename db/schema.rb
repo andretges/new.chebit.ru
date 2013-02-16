@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208093229) do
+ActiveRecord::Schema.define(:version => 20130216113208) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(:version => 20130208093229) do
   create_table "presentations", :force => true do |t|
     t.integer  "conference_id", :null => false
     t.string   "title",         :null => false
-    t.text     "context",       :null => false
-    t.string   "autor",         :null => false
+    t.text     "content",       :null => false
+    t.string   "author",        :null => false
     t.text     "video_embed"
     t.string   "file_name"
     t.string   "file"

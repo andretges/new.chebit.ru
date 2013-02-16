@@ -15,9 +15,9 @@
               = link_to present.title, present
             .conf-block-date
               %i.fontello-icon-user.icon-size-16.v-align-top
-              = present.autor
+              = present.author
             .conf-block-text
-              = present.context.html_safe
+              = present.content.html_safe
             .conf-block-text
               - if present.video_embed.present?
                 %i.fontello-icon-video.icon-size-16.v-align-top

@@ -14,9 +14,9 @@
           .gray-title
             = @presentation.title
       .span4
-        .gray-block-autor
+        .gray-block-author
           %i.fontello-icon-user.icon-size-16.v-align-top
-          = @presentation.autor
+          = @presentation.author
   .span12
     .row
       .span8
@@ -37,7 +37,7 @@
         .presentation-block-title
           = @presentation.title
         .presentation-block-text
-          = @presentation.context.html_safe
+          = @presentation.content.html_safe
         .presentation-block-text
           %br
           %br
