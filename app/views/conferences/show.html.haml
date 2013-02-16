@@ -2,9 +2,6 @@
 .row.row-conference
   .conference-menu-block Все выступления
   .row-fluid
-    - if @conference.photo_content.present?
-      .span12
-        = @conference.photo_content
     - @conference.presentations.ordered.each do |present|
       .span6.span-block
         .row-fluid
@@ -24,4 +21,7 @@
               - if present.file.present?
                 %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
                 = present.file_name if present.file_name.present?
+    - if @conference.photo_content.present?
+      .span12
+        = @conference.photo_content.html_safe
   = render :partial => 'layouts/disquss'
