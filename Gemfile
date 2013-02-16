@@ -25,6 +25,7 @@ gem 'carrierwave'
 gem 'modernizr-rails'
 gem 'twitter'
 gem 'cells'
+gem 'airbrake'
 
 gem 'mini_magick'
 
