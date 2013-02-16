@@ -1,14 +1,7 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-
-  def default_url
-    "/" + [version_name, "avatar.jpg"].compact.join('_')
-  end
-
- include CarrierWave::MiniMagick
-
-  # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
+  include CarrierWave::MiniMagick
   include Sprockets::Helpers::RailsHelper
   include Sprockets::Helpers::IsolatedHelper
 
@@ -39,11 +32,11 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :scale => [50, 40]
+    process :resize_to_fill => [50, 40]
   end
 
   version :standard do
-    process :scale => [100, 80]
+    process :resize_to_fill => [100, 80]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
