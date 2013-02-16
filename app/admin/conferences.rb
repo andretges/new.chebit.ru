@@ -14,4 +14,18 @@ ActiveAdmin.register Conference do
     f.actions
   end
 
+  index do
+    column :image do |conference|
+      image_tag conference.image.thumb.url
+    end
+    column :title
+    column :date_conference
+    column :passed?
+    column :presentations do |conference|
+      link_to conference.presentations.count, admin_presentations_path(:q=>{:conference_id_eq => conference.id})
+    end
+
+    default_actions
+  end
+
 end

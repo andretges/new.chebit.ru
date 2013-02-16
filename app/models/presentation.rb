@@ -1,14 +1,15 @@
 class Presentation < ActiveRecord::Base
   attr_accessible :autor, :conference_id, :file, :file_name, :title, :context, :video_embed, :image
-  belongs_to :conference
-
-  scope :sort_presentation, order('id')
-
-  validates :conference_id, :numericality => true
-  validates :autor, :presence => true
-  validates :title, :presence => true
-  validates :context, :presence => true
 
   mount_uploader :file, FileUploader
   mount_uploader :image, ImageUploader
+
+  belongs_to :conference
+
+  scope :ordered, order(:title)
+
+  validates :conference, :presence => true
+  validates :title, :presence => true, :presence => true
+  validates :autor, :presence => true
+  validates :context, :presence => true
 end
