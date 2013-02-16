@@ -8,7 +8,7 @@ gem 'rvm'
 gem "libv8", ">= 3.11.8"
 gem 'jquery-rails'
 gem "haml", ">= 3.1.7"
-gem "bootstrap-sass", ">= 2.2.2.0"
+gem 'bootstrap-sass', '~> 2.3.0.0'
 gem "devise", ">= 2.2.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
