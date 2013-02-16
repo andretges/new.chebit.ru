@@ -26,6 +26,8 @@ gem 'modernizr-rails'
 gem 'twitter'
 gem 'cells'
 
+gem 'mini_magick'
+
 gem 'airbrake'
 gem "unicorn", ">= 4.3.1", :group => :production
 

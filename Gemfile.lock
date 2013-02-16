@@ -196,6 +196,8 @@ GEM
       activesupport (~> 3.1)
       polyamorous (~> 0.5.0)
     mime-types (1.19)
+    mini_magick (3.5.0)
+      subexec (~> 0.2.1)
     modernizr-rails (2.6.1)
     multi_json (1.5.0)
     multipart-post (1.1.5)
@@ -296,6 +298,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    subexec (0.2.2)
     therubyracer (0.11.3)
       libv8 (~> 3.11.8.12)
       ref
@@ -360,6 +363,7 @@ DEPENDENCIES
   kaminari-bootstrap
   launchy (>= 2.1.2)
   libv8 (>= 3.11.8)
+  mini_magick
   modernizr-rails
   pg
   quiet_assets (>= 1.0.1)
