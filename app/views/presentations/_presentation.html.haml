@@ -1,0 +1,18 @@
+- present = presentation
+
+%li
+  .media
+    .pull-left
+      = image_tag present.image.url, :class => 'media-object'
+    .media-body
+      %h4.media-heading= link_to present.title, present
+      %p
+        %i.icon-user
+        %small.muted= present.author
+      %p= present.content.html_safe
+
+      - if present.file.present?
+        %p
+          %i.fontello-icon-doc-text-inv.icon-size-16.v-align-top
+          = link_to present.file_name, present.file.url
+

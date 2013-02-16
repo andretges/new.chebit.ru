@@ -27,6 +27,9 @@ gem 'twitter'
 gem 'cells'
 gem 'airbrake'
 
+gem 'simple-navigation'
+gem 'simple-navigation-bootstrap'
+
 gem 'mini_magick'
 
 gem "unicorn", ">= 4.3.1", :group => :production

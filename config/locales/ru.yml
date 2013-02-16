@@ -7,4 +7,4 @@ ru:
     date_will_be: мероприятие будет
   time:
     formats:
-      default: "%d.%m.%Y"
+      default: "%d %B %Y"

@@ -1,21 +1,9 @@
-.navbar-inner.header
-  .container
-    .row
-      .span2.logo-top
-        = link_to root_url do
-          = image_tag('logo_head.jpg')
-      .span4.offset1.head-text-big
-        Свободная конференция
-        %br
-        веб-разработчиков
-      .span3.offset1
-        %b Попросите рассказать
-        о том,
-        %br
-        что вам интересно узнать
-        %br
-        %br
-        %b Сделайте доклад
-        о том что вы знаете
-%br
-%br
+%header.navbar.navbar-static-top
+  %nav.navbar-inner
+    .container
+      = link_to root_url, :class => 'brand' do
+        %b CHEBIT
+        %small - свободная конференция веб-разработчиков в Чебоксарах
+        -# = image_tag('logo_head.jpg')
+      .pull-right
+        = render_navigation :expand_all => true, :renderer => :bootstrap

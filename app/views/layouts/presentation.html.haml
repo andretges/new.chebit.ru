@@ -1,8 +1,0 @@
-= render 'layouts/head'
-%body{:class => "#{controller_name} #{action_name}"}
-  #main{:role => "main"}
-    = render 'layouts/header_presentation'
-    .container.top-space
-      .content.body
-        = yield
-  = render 'layouts/footer'
