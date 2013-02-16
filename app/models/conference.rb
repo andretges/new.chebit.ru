@@ -4,7 +4,7 @@ class Conference < ActiveRecord::Base
 
   has_many :presentations, :dependent => :destroy
 
-  scope :sort_by_date, order('date_conference DESC')
+  scope :ordered, order('date_conference DESC')
 
   validates :title, :presence => true
   validates :date_conference, :presence => true

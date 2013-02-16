@@ -3,8 +3,8 @@ class ConferencesController < InheritedResources::Base
 
 
   def index
-    @anounce_conference = Conference.sort_by_date.first
-    @conferences = Conference.sort_by_date.limit(5).offset(1)
+    @anounce_conference = Conference.where(:anounce=>true).first
+    @conferences = Conference.ordered
     render :layout => "application"
   end
 
