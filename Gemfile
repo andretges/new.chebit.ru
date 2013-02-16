@@ -29,7 +29,6 @@ gem 'airbrake'
 
 gem 'mini_magick'
 
-gem 'airbrake'
 gem "unicorn", ">= 4.3.1", :group => :production
 
 group :assets do
