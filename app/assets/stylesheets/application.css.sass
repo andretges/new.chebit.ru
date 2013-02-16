@@ -1,6 +1,8 @@
 @charset "UTF-8"
 
 @import bootstrap
+@import compass
+
 //@import icons
 //@import fontello/fontello
 //@import fontello/fontello-codes
@@ -9,5 +11,9 @@
 //@import twitter
 
 .content
-  padding-top: 20px
+  padding-top: 40px
 
+.caption
+  %h3
+    a
+      +link-colors(black)
