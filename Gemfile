@@ -3,6 +3,7 @@ gem 'rails', '3.2.11'
 gem 'activeadmin'
 gem 'active_admin_editor'
 gem 'activeadmin-translate'
+gem 'active_link_to'
 gem 'pg'
 gem 'rvm'
 gem "libv8", ">= 3.11.8"

@@ -1,5 +1,6 @@
 @charset "UTF-8"
 
+@import variables
 @import bootstrap
 @import compass
 
@@ -12,8 +13,14 @@
 
 .icon-gray
   +opacity(0.5)
-.content
+
+#main
   padding-top: 30px
+
+.navbar-static-top
+  .navbar-inner
+    padding-top: 10px
+    padding-bottom: 11px
 
 .caption
   h3
