@@ -13,7 +13,8 @@
     = csrf_meta_tags
     = yield(:head)
 %body{:class => "#{controller_name} #{action_name}"}
-  = render 'layouts/navigation'
+  = render 'layouts/header'
+  -# = render 'layouts/navigation'
   #main{:role => "main"}
     .container
       .content

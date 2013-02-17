@@ -4,20 +4,21 @@
 %ul.thumbnails
   - @conferences.each do |c|
     %li.span4
+      .caption
+        %h3= link_to c.title, conference_path(c)
+        %p
+          %i.icon-calendar.icon-gray
+          %small.muted= l c.date_conference
       .thumbnail
         = link_to conference_path(c) do
           = image_tag c.image.extra.url, :size => '300x200'
-        .caption
-          %h3= link_to c.title, conference_path(c)
-          %p
-            %i.icon-calendar
-            %small.muted= l c.date_conference
-          %p= c.description.html_safe
-          .pull-right
-            = link_to conference_path(c), :class => 'btn' do
-              %i.icon-bullhorn
-              Доклады (#{c.presentations.count})
-          .clearfix
+      .caption
+        %p= c.description.html_safe
+        .pull-right
+          = link_to conference_path(c), :class => 'btn' do
+            %i.icon-bullhorn
+            Доклады (#{c.presentations.count})
+        .clearfix
 
 
 -#%hr
