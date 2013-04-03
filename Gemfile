@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
-gem 'rails', '3.2.11'
+gem 'rails', '~> 3.2.11'
 gem 'activeadmin'
 gem 'active_admin_editor'
 gem 'activeadmin-translate'
 gem 'active_link_to'
 gem 'pg'
-gem 'rvm'
 gem "libv8", ">= 3.11.8"
 gem 'jquery-rails'
 gem "haml", ">= 3.1.7"
@@ -53,7 +52,8 @@ group :development do
   gem 'debugger'
   gem 'capistrano'
   gem 'capistrano-recipes0', :git => 'git://github.com/BrandyMint/capistrano-recipes0.git'
-  gem 'rvm-capistrano'
+  gem 'capistrano-rbenv'
+  gem 'holepicker', :require => false
 end
 
 group :test do
