@@ -36,12 +36,13 @@ after 'deploy:finalize_update', 'chebit:symlink_configs'
 
 #RVM, Bundler
 load 'deploy/assets'
-require "capistrano-rbenv"
 require "bundler/capistrano"
+require "capistrano-rbenv"
+require "holepicker/capistrano"
 require "recipes0/database_yml"
-require "recipes0/nginx"
-require "recipes0/init_d/unicorn"
 require "recipes0/db/pg"
+require "recipes0/init_d/unicorn"
+require "recipes0/nginx"
 
 namespace :chebit do
    task :symlink_configs, :except => { :no_release => true } do
