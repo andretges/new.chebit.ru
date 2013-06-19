@@ -1,12 +1,19 @@
-%header.navbar.navbar-static-top
+%header#header.navbar.navbar-static-top
   %nav.navbar-inner
     .container
       .row
-        .span4
+        .span3
           = link_to root_path do
-            = image_tag 'chebit_logo_dark_no_border.png'
-        .span8
-          .pull-right
-            .brand{:rel=>:tooltip, :title=>'Если вы хотите что-то узнать — попросите об этом рассказать, а сами сделайте доклад о том, что знаете вы.'}
-              %small Ежегодная конференция веб-разработчиков в Чебоксарах
-
+            = image_tag 'chebit_logo_white.png'
+        %big.span5
+          %span Свободная конференция
+          веб-разработчиков
+        .span4.pull-right
+          %b Попросите рассказать
+          о том,
+          %br
+          что вам интересно
+          %br
+          %br
+          %b Сделайте доклад
+          о том, что знаете вы
