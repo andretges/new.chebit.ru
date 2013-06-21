@@ -5,7 +5,7 @@
 @import compass
 
 //@import icons
-//@import fontello/fontello
+@import fontello/fontello
 //@import fontello/fontello-codes
 //@import fontello/fontello-ie7
 //@import fontello/fontello-ie7-codes
@@ -14,12 +14,45 @@
 .icon-gray
   +opacity(0.5)
 
+.btn
+  border: 3px solid $white !important
+  padding: 15px 40px
+  +box-shadow(inset -1px 2px 3px -2px $black, 0 0 4px -2px $black !important)
+  +border-radius(8px)
+  [class^=fontello]:before,
+  [class*=fontello]:before
+    font-size: 45px
+    +opacity(0.5)
+
+.btn.btn-warning
+  +buttonBackground($orange, $orange)
+
+.round
+  position: relative
+  display: inline-block
+  text-align: center
+  text-decoration: none
+  text-shadow: none
+  font-size: 32px
+  line-height: 64px
+  +square(64px)
+  +border-radius(500px)
+  +box-shadow(inset -1px 1px 6px -2px $black, 1px 1px 1px -1px $gray)
+  background: $orange
+  [class^=fontello]:before,
+  [class*=fontello]:before
+    +opacity(1)
+
+
+
 #main
   padding-top: 30px
+  background: $colorBlue
 
 #header
   color: $white
   .navbar-inner
+    border: 0
     padding: 30px
     padding-bottom: 31px
     background: $colorBlueDark
@@ -31,9 +64,31 @@
   .pull-right
     font-family: $altFontFamily
 
+.top
+  font-size: 16px
+  color: $white
+  .video
+    margin-top: 58px
+    a
+      color: $white
+      text-decoration: none
+
+
+.hero-unit
+  font-size: 60px
+  line-height: 120%
+  background: none
+  padding: 0
+  +border-radius(0)
+  strong
+    text-shadow: 1px 2px 1px #085174
+    font-weight: bold
+
+
 .caption
   h3
     margin-bottom: 0px
     a
       +link-colors(black)
+
 

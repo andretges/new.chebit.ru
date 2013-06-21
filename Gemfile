@@ -54,6 +54,7 @@ group :development do
   gem 'capistrano-recipes0', :git => 'git://github.com/BrandyMint/capistrano-recipes0.git'
   gem 'capistrano-rbenv'
   gem 'holepicker', :require => false
+  gem 'guard-livereload'
 end
 
 group :test do

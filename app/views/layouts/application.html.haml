@@ -10,15 +10,28 @@
     = javascript_include_tag "mediaelement-and-player.min.js"
     = javascript_include_tag "jquery.imagesloaded.min.js"
     = javascript_include_tag 'modernizr.min'
+    = javascript_include_tag "https://raw.github.com/livereload/livereload-js/master/dist/livereload.js?host=127.0.0.1"
     = csrf_meta_tags
     = yield(:head)
 %body{:class => "#{controller_name} #{action_name}"}
   = render 'layouts/header'
   #main{:role => "main" }
-    .container
-      %ul.nav.nav-pills
-        = active_link_to 'Доклады', presentations_path, :wrap_tag => :li
-        = active_link_to 'Прошедшие события', conferences_path, :wrap_tag => :li
+    .container.top
+      .row
+        .hero-unit.span9
+          %strong Название какой-то конференции
+          %ins.round 
+            %i.fontello-icon-link
+        .span3.pull-right.video
+          %a.btn.btn-warning{:href => ""} 
+            %i.fontello-icon-play
+          %br/ 
+          %br/ 
+          %a{:href => ""} видео и презентации с выступлений &rsaquo;
+        %p.span8 Медиатека докладов с мероприятия, прошедшего 23 февраля, в баре "Матрос"
+      -#%ul.nav.nav-pills
+        -#= active_link_to 'Доклады', presentations_path, :wrap_tag => :li
+        -#= active_link_to 'Прошедшие события', conferences_path, :wrap_tag => :li
       -#= render 'layouts/navigation'
     .container
       .content
