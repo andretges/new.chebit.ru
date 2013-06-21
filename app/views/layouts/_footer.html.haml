@@ -1,37 +1,28 @@
-%footer.footer
+%footer#footer
   .container
     .row-fluid
       .span2
-        .footer-logo
-          = link_to root_url do
-            =image_tag('logo_footer.jpg')
-            <a href="http://en.wikipedia.org/wiki/BarCamp">BarCamp</a> в Чебоксарах.
+        = link_to root_url, {:class => "logo"} do
+          =image_tag 'chebit_logo_white.png'
 
-          %b CHEBIT
-          %small свободная конференция веб-разработчиков, организаторами которой являются сами докладчики
-      -#.span10.footer-block
-        -#.row-fluid.footer-row-block
-          -#.span2
-            -#.footer-title
-              -#Контакты
-          -#.span10
-            -#.footer-text
-              -#= link_to 'Данил Письменный', 'http://dapi.ru/', :target => '_blank'
-        -#.row-fluid.footer-row-block
-          -#.span2
-            -#.footer-title
-              -#Партнеры
-          -#.span10
-            -#.footer-text
-              -#=link_to 'http://www.ravidok.ru/', :target => '_blank' do
-                -#= image_tag("vidok.png", :class => "logo-partner")
-              -#=link_to 'http://webatmosfera.ru/', :target => '_blank' do
-                -#= image_tag("webatmosfera.svg", :class => "logo-partner")
-              -#=link_to 'http://www.avis-design.ru/', :target => '_blank' do
-                -#= image_tag("avis_design.gif", :class => "logo-partner")
-        -#.row-fluid.footer-row-block
-          -#.span4
-            -#.footer-title
-              -#Коллеги по цеху
-          -#.span8
-            -#.footer-text.footer-ceh
+      .span10.rows
+        .row-fluid
+          %big.span2
+            Контакты
+          .span10
+            = link_to 'Данил Письменный', 'http://dapi.ru/', :target => '_blank'
+        .row-fluid
+          %big.span2
+            Партнёры
+          .span10.logos
+            =link_to 'http://www.ravidok.ru/', :target => '_blank', :rel => 'nofollow' do
+              = image_tag "vidok.png"
+            =link_to 'http://webatmosfera.ru/', :target => '_blank', :rel => 'nofollow' do
+              = image_tag "webatmosfera.svg"
+            =link_to 'http://www.avis-design.ru/', :target => '_blank', :rel => 'nofollow' do
+              = image_tag "avis_design.gif"
+        .row-fluid
+          %big.span3
+            Коллеги по цеху
+          .span9
+            = link_to 'Данил Письменный', 'http://dapi.ru/', :target => '_blank'

@@ -14,13 +14,13 @@
     = csrf_meta_tags
     = yield(:head)
 %body{:class => "#{controller_name} #{action_name}"}
-  = render 'layouts/header'
-  #main{:role => "main" }
-    .container.top
+  #wrapper{:role => "main" }
+    = render 'layouts/header'
+    .container#top
       .row
-        .hero-unit.span9
+        .hero-unit.span8
           %strong Название какой-то конференции
-          %ins.round 
+          %a.round{:href => ""} 
             %i.fontello-icon-link
         .span3.pull-right.video
           %a.btn.btn-warning{:href => ""} 
@@ -36,7 +36,7 @@
         -#= active_link_to 'Доклады', presentations_path, :wrap_tag => :li
         -#= active_link_to 'Прошедшие события', conferences_path, :wrap_tag => :li
       -#= render 'layouts/navigation'
-    .container
+    .container#main
       .content
         .row
           .span12
