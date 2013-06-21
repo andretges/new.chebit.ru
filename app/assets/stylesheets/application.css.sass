@@ -39,9 +39,6 @@
   +border-radius(500px)
   +box-shadow(inset -1px 1px 6px -2px $black, 1px 1px 1px -1px $gray)
   background: $orange
-  [class^=fontello]:before,
-  [class*=fontello]:before
-    +opacity(1)
 
 
 
@@ -72,6 +69,10 @@
     a
       color: $white
       text-decoration: none
+    b [class^=fontello]:before,
+    b [class*=fontello]:before
+      width: auto
+      font-size: 16px
 
 
 .hero-unit
