@@ -6,7 +6,7 @@ gem 'activeadmin-translate'
 gem 'active_link_to'
 gem 'pg'
 gem "libv8", ">= 3.11.8"
-gem 'jquery-rails'
+gem 'jquery-rails', '2.3.0'
 gem "haml", ">= 3.1.7"
 gem 'bootstrap-sass', '~> 2.3.0.0'
 gem "devise", ">= 2.2.2"

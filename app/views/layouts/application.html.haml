@@ -38,8 +38,43 @@
       -#= render 'layouts/navigation'
     .container#main
       .content
-        .row
-          .span12
-            = render 'layouts/messages'
-            = yield
+        .stripe.span12 Все мероприятия
+        .news.pull-left
+          .list.span8
+            .row-fluid
+              .span3 
+                %img{:src => "/assets/vidok.png", :alt => ""}/ 
+              .span8 
+                %h2.orangeDark Конференция &laquo;Веб-разработка и котики 2013&raquo;
+                %time{:datetime => ""} 
+                  %i.fontello-icon-calendar 
+                  %span 23.02.2013
+                %p dsfgafg asdf asd f
+              %a.more.span1{:href => ""} 
+                %i.fontello-icon-right-open-big
+                %span посмотреть доклады
+          %hr.bold/
+
+          .list.span8
+            .row-fluid
+              .span3 
+                %img{:src => "/assets/vidok.png", :alt => ""}/ 
+              .span8 
+                %h2.orangeDark Конференция &laquo;Веб-разработка и котики 2013&raquo;
+                %time{:datetime => ""} 
+                  %i.fontello-icon-calendar 
+                  %span 23.02.2013
+                %p dsfgafg asdf asd f
+              %a.more.span1{:href => ""} 
+                %i.fontello-icon-right-open-big
+                %span посмотреть доклады
+          %hr.bold/
+
+        .twitter.span4 
+          %h3 
+            %span Прямой эфир 
+            %a.orange{:href => ""} #chebit
+
+        = render 'layouts/messages'
+        = yield
   = render 'layouts/footer'
