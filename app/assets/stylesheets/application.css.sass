@@ -2,17 +2,18 @@
 
 @import variables
 @import bootstrap
-@import compass
+@import mixins
+// @import compass
 
 //@import icons
 @import fontello/fontello
 //@import fontello/fontello-codes
-//@import fontello/fontello-ie7
-//@import fontello/fontello-ie7-codes
-//@import twitter
+@import fontello/fontello-ie7
+// @import fontello/fontello-ie7-codes
+@import twitter
 
 .icon-gray
-  +opacity(0.5)
+  +opacity(50)
 
 .btn
   border: 3px solid $white !important
@@ -22,7 +23,7 @@
   [class^=fontello]:before,
   [class*=fontello]:before
     font-size: 45px
-    +opacity(0.5)
+    +opacity(50)
 
 .btn.btn-warning
   +buttonBackground($orange, $orange)
@@ -71,6 +72,7 @@ p
 #header
   color: $white
   margin-bottom: 30px
+  font-size: 14px
   .navbar-inner
     border: 0
     padding: 30px
@@ -135,6 +137,15 @@ p
     padding: 0 35px
     margin-top: 20px
     clear: both
+  aside
+    float: right
+    margin-top: -57px
+    margin-left: 0
+    h3
+      margin: 0
+      padding-left: 25px
+      font-size: 18px
+      line-height: 57px
 
 .stripe
   background: #F2F2F2
@@ -148,6 +159,7 @@ p
   padding: 20px 0
   h2
     line-height: 120%
+    font-weight: bold
 
 .news .list
   margin-left: 35px
@@ -168,13 +180,11 @@ hr
   border-width: 4px
 
 .more
-  color: $orange
+  +link-colors($orange,$orange)
   text-align
   font-size: 11px
   line-height: 13px
   text-decoration: none
-  &:hover
-    color: $orange
   [class^=fontello]:before,
   [class*=fontello]:before
     width: auto
@@ -186,18 +196,6 @@ hr
 .page-header
   clear: both
 
-.twitter
-  float: right
-  background: #E5E5E5
-  margin-top: -57px
-  margin-left: 0
-  h3
-    margin: 0
-    padding-left: 25px
-    font-size: 18px
-    line-height: 57px
-    font-weight: bold
-
 // .caption
 //   h3
 //     margin-bottom: 0px
@@ -208,6 +206,7 @@ hr
 #footer
   position: relative
   height: 260px
+  font-size: 14px
   z-index: 1
   .rows > div
     margin-bottom: 25px
@@ -222,7 +221,5 @@ hr
       display: inline-block
       margin-right: 23px
   a
-    color: $white
+    +link-colors($white,$white)
     text-decoration: none
-    &:hover
-      color: $white
