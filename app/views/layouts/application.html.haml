@@ -43,7 +43,7 @@
           .list.span8
             .row-fluid
               .span3 
-                %img{:src => "/assets/vidok.png", :alt => ""}/ 
+                %img{:src => "/assets/chebit_logo_dark.jpg", :alt => ""}/ 
               .span8 
                 %h2.orangeDark Конференция &laquo;Веб-разработка и котики 2013&raquo;
                 %time{:datetime => ""} 
@@ -53,12 +53,12 @@
               %a.more.span1{:href => ""} 
                 %i.fontello-icon-right-open-big
                 %span посмотреть доклады
-          %hr.bold/
+          %hr/
 
           .list.span8
             .row-fluid
               .span3 
-                %img{:src => "/assets/vidok.png", :alt => ""}/ 
+                %img{:src => "/assets/chebit_logo_dark.jpg", :alt => ""}/ 
               .span8 
                 %h2.orangeDark Конференция &laquo;Веб-разработка и котики 2013&raquo;
                 %time{:datetime => ""} 
@@ -68,13 +68,15 @@
               %a.more.span1{:href => ""} 
                 %i.fontello-icon-right-open-big
                 %span посмотреть доклады
-          %hr.bold/
+          %hr/
 
         .twitter.span4 
           %h3 
             %span Прямой эфир 
             %a.orange{:href => ""} #chebit
-
-        = render 'layouts/messages'
-        = yield
+        
+        .clearfix
+        .center
+          = render 'layouts/messages'
+          = yield
   = render 'layouts/footer'

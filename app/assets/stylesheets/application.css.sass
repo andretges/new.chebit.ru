@@ -54,6 +54,9 @@ h1,h2,h3,h4,h5,h6
   &:first-child
     margin-top: 0
 
+h1,h2
+  font-size: 25px
+
 p
   margin: 5px 0
 
@@ -74,7 +77,7 @@ p
     padding-bottom: 31px
     background: $colorBlueDark
   big
-    font-size: 26px
+    font-size: 25px
     span
       display: inline-block
       margin-bottom: 18px
@@ -128,11 +131,15 @@ p
   overflow: hidden
   +box-shadow(-2px 6px 10px -5px $black)
   +border-radius(8px)
+  .center
+    padding: 0 35px
+    margin-top: 20px
+    clear: both
 
 .stripe
   background: #F2F2F2
   height: 57px
-  font-size: 26px
+  font-size: 25px
   line-height: 57px
   padding: 0 ($gridGutterWidth + 15)
   margin-left: 0
@@ -140,7 +147,6 @@ p
 .list
   padding: 20px 0
   h2
-    font-size: 25px
     line-height: 120%
 
 .news .list
@@ -152,7 +158,7 @@ time
   span
   font-size: 13px
 
-hr.bold
+hr
   position: relative
   display: block
   width: auto
@@ -190,6 +196,7 @@ hr.bold
     padding-left: 25px
     font-size: 18px
     line-height: 57px
+    font-weight: bold
 
 // .caption
 //   h3
